@@ -1,0 +1,188 @@
+﻿/* demo page styles */
+body {
+    margin: 0px;
+    padding: 0px;
+    background: radial-gradient(135deg, #2cb5e8 10%, #ff6a00 61%, rgba(0, 74, 143, 100) 5%);
+}
+
+.logout:hover {
+    box-shadow: 0 10px 20px -1px black; /*one side edge*/
+}
+
+.example {
+    background: rgba(0, 0, 0, 0.70); /*orange*/
+    float: none;
+    margin: 0px auto;
+    padding: 10px;
+    border-radius: 1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    list-style: none;
+    visibility: visible;
+    z-index: 100;
+}
+
+
+/* main menu styles */
+#nav, #nav ul {
+    background-image:;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    visibility: visible;
+    z-index: 100;
+}
+
+#nav {
+    height: 41px;
+    padding-left: 5px;
+    padding-top: 5px;
+    position: relative;
+    z-index: 100;
+    visibility: visible;
+}
+
+    #nav ul {
+        left: -9999px;
+        position: absolute;
+        top: 37px;
+        width: auto;
+    }
+
+        #nav ul ul {
+            left: -9999px;
+            position: absolute;
+            top: 0;
+            width: auto;
+        }
+
+    #nav li {
+        float: left;
+        margin-right: 5px;
+        position: relative;
+    }
+
+        #nav li a {
+            background-color: transparent;
+            color: #000;
+            display: block;
+            float: left;
+            font-size: 16px;
+            padding: 8px 10px;
+            text-decoration: none;
+            visibility: visible;
+            z-index: 100;
+        }
+
+    #nav > li > a {
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    #nav li a.fly {
+        background: url('arrow.gif') no-repeat right center rgba(0, 0, 238, 0.00);
+        padding-right: 15px;
+        visibility: visible;
+        z-index: 100;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+
+    #nav ul li {
+        margin: 0;
+    }
+
+        #nav ul li a {
+            width: 120px;
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+            #nav ul li a.fly {
+                padding-right: 10px;
+                -moz-border-radius: 6px;
+                -webkit-border-radius: 6px;
+                border-radius: 6px;
+                overflow: hidden;
+            }
+
+    /*hover styles*/
+    #nav li:hover > a {
+        background-color: rgba(0, 74, 143, 100);
+        box-shadow: 0 10px 20px -1px black; /*one side edge*/
+        color: #ffffff;
+        visibility: visible;
+        z-index: 100;
+    }
+
+    /*focus styles*/
+    #nav li a:focus {
+        outline-width: 0;
+    }
+
+        /*popups*/
+        #nav li a:active + ul.dd, #nav li a:focus + ul.dd, #nav li ul.dd:hover {
+            left: 0px;
+        }
+
+    #nav ul.dd li a:active + ul, #nav ul.dd li a:focus + ul, #nav ul.dd li ul:hover {
+        left: 120px;
+    }
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 380px;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 960px) {
+    .jumbotron {
+        margin-top: 20px;
+        background: white;
+        box-shadow: 0 10px 20px -1px black; /*one side edge*/
+    }
+
+
+    .body-content {
+        padding: 0;
+    }
+
+    .footer {
+    }
+
+    .address {
+        margin-left: 0px;
+    }
+
+    .map {
+        margin-left: 220px;
+        margin-top: -130px;
+    }
+
+    .footerright {
+        float: right;
+        margin-right: 50px;
+        margin-top: -130px;
+    }
+}
